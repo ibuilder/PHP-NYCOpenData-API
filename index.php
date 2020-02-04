@@ -121,7 +121,7 @@ function loadPermit(id) {
 
 </div>
 <br>
-<p align="right"><input type="button" name="BIS data" value="Deed Info" onclick=" loadPermit('<?php echo $array[$i]['block']?>')" ></p>
+<p align="right"><input type="button" name="BIS Permit data" value="Latest Permits" onclick=" loadPermit('<?php echo $array[$i]['block']?>')" ></p>
 
 <table class="table table-dark">
   <thead>
@@ -151,7 +151,7 @@ function loadPermit(id) {
 	 
 		<td><?php echo substr($array[$i]['restriction'],0,50);?></td>
 		<td><?php echo $array[$i]['latitude'].'<br/>'.$array[$i]['longitude']?></td>
-		<td> <input type="button" name="BIS data" value="BIS data" onclick=" loadDoc1('<?php echo $array[$i]['block']?>')" ></td>
+		<td> <input type="button" name="Permits" value="Permits" onclick="<?php /*Add iframe/integrationinfo here */?>" ><input type="button" name="Deed Info" value="Deed Info" onclick=" loadDoc1('<?php echo $array[$i]['block']?>')" ></td>
 		 
 
     </tr>
