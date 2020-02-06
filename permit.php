@@ -1,25 +1,17 @@
 <?php
 error_reporting(0);
-
- 
- $id='181';
-  $id=$_GET['id'];
-  // $url='https://data.cityofnewyork.us/id/ipu4-2q9a.json?$query=select%20*%2C%20%3Aid%20search%20%27'.$id.'%27&$$app_token=x3LTwBxAzd21ZTjtLeBI3C0JM' ;
-    $url='https://data.cityofnewyork.us/api/id/rfu7-paqe.json?$query=select%20*%2C%20%3Aid%20where%20(%60block%60%20%3D%20'.$id.')%20order%20by%20%60boro%60%20asc%2C%20%60block%60%20asc%2C%20%60lot%60%20asc%20limit%20100';
+$id='181';
+$id=$_GET['id'];
+// $url='https://data.cityofnewyork.us/id/ipu4-2q9a.json?$query=select%20*%2C%20%3Aid%20search%20%27'.$id.'%27&$$app_token=x3LTwBxAzd21ZTjtLeBI3C0JM' ;
+$url='https://data.cityofnewyork.us/api/id/rfu7-paqe.json?$query=select%20*%2C%20%3Aid%20where%20(%60block%60%20%3D%20'.$id.')%20order%20by%20%60boro%60%20asc%2C%20%60block%60%20asc%2C%20%60lot%60%20asc%20limit%20100';
 $url='https://data.cityofnewyork.us/api/id/e98g-f8hy.json?$query=select%20*%2C%20%3Aid%20limit%20100';
 // Initialize a CURL session. 
 $ch = curl_init();  
-
 // Return Page contents. 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-
 //grab URL and pass it to the variable. 
 curl_setopt($ch, CURLOPT_URL, $url); 
-
-  $result = curl_exec($ch); 
-
- 
- 
+$result = curl_exec($ch); 
 $array=json_decode($result,true);
   
   $arraydata=array();
@@ -29,8 +21,7 @@ $array=json_decode($result,true);
 		$arraydata=$array[$i];
 	}
   
-  }
-   
+  }  
 ?>
 
 <html>
