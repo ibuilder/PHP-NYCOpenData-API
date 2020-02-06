@@ -111,7 +111,6 @@ function loadPermit(id) {
   </div>
 </div>
 <br>
-<p align="right"><input type="button" name="BIS Permit data" value="Latest Permits" onclick=" loadPermit('<?php echo $array[$i]['block']?>')" ></p>
 <table class="table table-dark">
   <thead>
     <tr>
